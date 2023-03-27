@@ -4,6 +4,10 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+.img-grid {
+  width: 60;
+  height: 60;
+}
 div > div {
   padding: 10px;
   background-color: #ffffff;
