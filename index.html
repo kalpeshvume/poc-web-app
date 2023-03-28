@@ -18,11 +18,8 @@
     <script>
     function getURL() {
         alert("The URL of this page is: " + window.location.href);
-        const params = new Proxy(new URLSearchParams(window.location.search), {
-        get: (searchParams, prop) => searchParams.get(prop),
-        });
-        let value = params.token;
-        console.log("this is token" , value)
+        const urlParams = new URLSearchParams(window.location.search);
+        alert(urlParams.get('token'));
     }
     </script>
 
