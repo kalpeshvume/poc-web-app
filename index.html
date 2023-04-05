@@ -13,25 +13,32 @@
     <title>Telecasino</title>
     <script src="https://telegram.org/js/telegram-web-app.js?1"></script>
     <!-- <script src="index.js"></script> -->
-
+    <button id="fetch-button" onclick="fetchLaunchUrl()">Fetch Data</button>
    
     <script>
-    function getURL() {
-        alert("The URL of this page is: " + window.location.href);
-        const urlParams = new URLSearchParams(window.location.search);
-        alert(urlParams.get('user-id'));
-    }
+    // function getURL() {
+    //     alert("The URL of this page is: " + window.location.href);
+    //     const urlParams = new URLSearchParams(window.location.search);
+    //     alert(urlParams.get('user-id'));
+    // }
+    
+    async function fetchLaunchUrl() {
+		let resp = await fetch("https://f23d-171-76-87-142.in.ngrok.io/api/app/launch-url", {
+			mode: "no-cors",
+			headers: {"Accept": "application/json",
+			"Access-Control-Allow-Origin": "*"} 
+		})
 
-    function launchGame() {
-        // Call the API to for the launch URL
-        
-    }
+		console.log(resp)
+        alert("this is response -->", resp)
+	}
+   
     </script>
 
-    <button type="button" onclick="getURL();">Get Page URL</button>
+    <!-- <button type="button" onclick="getURL();">Get Page URL</button> -->
 
  
-    <div class="grid">
+    <!-- <div class="grid">
 
         <div>
             <img src="https://www.googleapis.com/download/storage/v1/b/images-games/o/gpi-1857.jpg?generation=1604658105819888&alt=media" width="80" id="game-id" height="80" style="vertical-align:middle" onclick="launchGame(this)"> 
@@ -71,7 +78,7 @@
 
       
 
-    </div>
+    </div> -->
 
 </head>
 </html>
