@@ -19,7 +19,12 @@
     function getURL() {
         alert("The URL of this page is: " + window.location.href);
         const urlParams = new URLSearchParams(window.location.search);
-        alert(urlParams.get('token'));
+        alert(urlParams.get('user-id'));
+    }
+
+    function launchGame() {
+        // Call the API to for the launch URL
+        
     }
     </script>
 
@@ -29,7 +34,7 @@
     <div class="grid">
 
         <div>
-            <img src="https://cdn.windaddy.com/wac__TVBET-6__v1.jpg" width="80" height="80" style="vertical-align:middle"> 
+            <img src="https://www.googleapis.com/download/storage/v1/b/images-games/o/gpi-1857.jpg?generation=1604658105819888&alt=media" width="80" id="game-id" height="80" style="vertical-align:middle" onclick="launchGame(this)"> 
             <a href="https://pi-test.njoybingo.com/game.do?token=255d8c46-8178-4e76-97bd-892ad481d097&pn=joshplatform&game=TVBET-6&type=CHARGED&lang=en&device=mobile&lobby=false&homeUrl=https://www.joshgames.in/casino">Play 5 Bet</a></div>
         
         <div>
